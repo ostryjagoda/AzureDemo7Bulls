@@ -7,9 +7,6 @@ import javax.persistence.*;
 @Data
 @Entity
 public class AzureServicePrice {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
     @Column(nullable = false)
     private String currencyCode;
     @Column(nullable = false)
@@ -30,6 +27,7 @@ public class AzureServicePrice {
     private String meterName;
     @Column(nullable = false)
     private String productId;
+    @Id
     @Column(nullable = false, unique = true)
     private String skuId; //That is not unique, why?
     @Column(nullable = false)
